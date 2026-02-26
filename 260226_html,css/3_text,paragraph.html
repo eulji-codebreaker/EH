@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header{
+            text-align: center;
+            text-decoration: underline;
+        }
+        nav{
+            direction: ltr;
+        }
+        .title{
+            color:red;
+        }
+        .big{
+            list-style-type: square;
+        }
+        .small{
+            list-style-type: circle;
+        }
+        .schedule {
+            list-style-type: upper-roman;
+        }
+        .memo{ 
+            text-decoration:line-through;
+            text-align: right;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>여행 계획 작성하기</h1>
+    </header>
+    <nav>
+        <p>이번 여름 휴가는 제주도로 떠나기로 했습니다.
+            맛있는 음식과 아름다운 자연을 즐기면서 특별한 추억을 만들고 싶습니다.
+            가족들과 함께하는 3박 4일의 여행이 될 것 같아 설렘이 가득합니다.
+            완벽한 여행을 위해 꼼꼼히 계획을 세워보았습니다.
+        </p>
+    </nav>
+    <article>
+        <h3 class="title">준비물 목록</h3>
+        <ul>
+            <li class="big">의류</li>
+            <li class="small">여름옷 3벌</li>
+            <li class="small">수영복</li>
+            <li class="small">모자</li>
+            <li class="big">전자기기</li>
+            <li class="small">카메라</li>
+            <li class="small">보조배터리</li>
+            <li class="small">충전기</li>
+        </ul>
+        <h3>일정표</h3>
+            <ol class="schedule">
+                <li><strong>09:00</strong> - <em>공항</em> 도착</li>
+                <li><strong>10:30</strong> - <em>제주 민속촌</em> 관람</li>
+                <li><strong>13:00</strong> - <em>중문 해수욕장</em> 방문</li>
+                <li><strong>16:00</strong> - <em>성산일출봉</em> 등반</li>
+                <li><strong>19:00</strong> - <em>흑돼지 거리</em> 저녁 식사</li>
+            </ol>
+
+            <p class="memo">
+                우산 챙기기 (기상예보 맑음)
+            </p>
+    </article>
+</body>
+</html>
