@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background: rgb(31, 31, 31);
+            color: white;
+            margin-bottom: 5px;
+            padding-left: 10px;
+        }
+
+        main {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height:671px;
+            display: flex;
+            flex-wrap: wrap;
+            flex-flow: row;
+            flex-direction: r;
+        }
+
+        nav {
+            padding: 5px;
+            border: 1px solid gray;
+            width: 150px;
+            display: inline;
+            float: left;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        .content {
+            border: 1px solid gray;
+            display: inline;
+            flex-wrap: wrap;
+            flex-flow: column;
+            width: 100%;
+            flex:1;
+        }
+
+        aside {
+            padding: 10px;
+            border: 1px solid gray;
+            width: 150px;
+            display: inline;
+            float: right;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        #discription {
+            margin: 5px;
+            background: rgba(143, 212, 255, 0.483);
+            border-style: dotted;
+            border-color: rgb(54, 138, 255);
+        }
+
+        footer {
+            background: rgb(31, 31, 31);
+            color: white;
+            margin-top: 5px;
+            padding-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h4>머리부(Header)</h4>
+    </header>
+    <main>
+        <nav>
+            <p><b>네비게이션(Nav)</b></p>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+        <div class="content">
+            <h2>메인 콘텐츠(Main)</h2>
+            <div id="discription">
+                <p>양옆은 고정폭, 가운데는 가변폭!</p>
+            </div>
+            <p>Hint. 가운데 영역은 <small>flex: 1</small>로 남는 공간을 차지합니다.</p>
+        </div>
+        <aside>
+            <p><b>사이드바(Aside)</b></p>
+            <p>공지/광고/프로필 등</p>
+        </aside>
+    </main>
+    <footer>
+        <h4>바닥부(Footer)</h4>
+    </footer>
+</body>
+
+</html>
