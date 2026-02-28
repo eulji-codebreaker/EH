@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display:flex;
+            margin:0;
+            flex-direction: column;
+        }
+        header{
+            background-color: lightpink;
+            padding-left: 10px;
+            font-family: 궁서체;
+            height: 80px;
+        }
+        main {
+            /* border:1px solid gray; */
+            display: flex;
+            flex-flow: row;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            flex:1;
+        }
+        nav{
+            border: 1px solid gray;
+            margin-left: 5px;
+            margin-right: 5px;
+            width: 100px;
+            padding: 10px;
+        }
+        article{
+            border: 1px solid gray;
+            flex:1;
+            padding: 10px;
+        }
+        aside{
+            border: 1px solid gray;
+            margin-left: 5px;
+            margin-right: 5px;
+            width: 150px;
+            padding: 10px;
+        }
+        footer{
+            background-color: lightpink;
+            padding-left: 10px;
+            font-family: 궁서체;
+            height: 50px;
+        }
+        footer p{
+        }
+        
+    </style>
+</head>
+<body>
+    <header><h1>김태완의 자기소개</h1></header>
+    <main>
+        <nav>
+            <h3>연결링크</h3>
+            <ul style="margin-left: 0; padding: 15px;">
+                <li id="gitlink"><a href="https://github.com/CallmeEterHist" target="_blank">Github</a></li>
+                <li id="tistorylink"><a href="https://callmeeh.tistory.com/">Tistory</a></li>
+                <li id="notionlink"><a href="https://www.notion.so/Main-29abab4d001c80fbbca4f1f0ca80ee5a">Notion</a></li>
+                <li id="iglink"><a href="https://www.instagram.com/twkim_aka_eh">IG</a></li>
+            </ul>
+        </nav>
+        <article>
+            <div class="top">
+                <p>안녕하십니까, 저는 김태완입니다. 지금부터 제 소개를 시작해보도록 하겠습니다.</p>
+            </div>
+            <div class="index" id="index 1"><h4>프로필</h4></div>
+            <div class="descript" id="des 1">
+                <table>
+                    <tr>
+                        <tr>
+                            <td>이름</td>
+                            <td>김태완</td>
+                        </tr>
+                        <tr>
+                            <td>학교</td>
+                            <td>을지대학교</td>
+                        </tr>
+                        <tr>
+                            <td>생년월일</td>
+                            <td>2002.05.15</td>
+                        </tr>
+                    </tr>
+                    
+                </table>
+            </div>
+            <div class="index" id="index 2">취미</div>
+            <div class="descript" id="des 2">gd</div>
+            <div class="index" id="index 3"></div>
+            <div class="descript" id="des 3"></div>
+        </article>
+        <aside>
+            <h3>이동하기</h3>
+            <ol type="I" style="margin: 0; padding-left:15px ;">
+                <li><a href="#index 1">프로필</a></li>
+                <li><a href="#index 2">취미와 특기</a></li>
+                <li><a href="#index 3">프로필</a></li>
+            </ol>
+        </aside>
+    </main>
+    <footer>
+        <p>contact :</p>
+    </footer>
+</body>
+</html>
