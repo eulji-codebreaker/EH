@@ -7,7 +7,7 @@
     <title>Document</title>
     <style>
         body {
-            display:flex;
+            display: flex;
             margin: 0;
             flex-flow: column;
         }
@@ -27,15 +27,24 @@
             padding-bottom: 10px;
             flex: 1;
             background-color: white;
+            margin-bottom: 50px;
         }
 
         nav {
             border: 1px solid gray;
             margin-left: 5px;
             margin-right: 5px;
-            width: 100px;
+            width: 150px;
             padding: 10px;
             background-color: bisque;
+        }
+
+        nav>div {
+            margin-left: 10px;
+        }
+
+        nav>div>ul {
+            padding-left: 20px;
         }
 
         article {
@@ -53,19 +62,18 @@
             padding: 10px;
             background-image: url(assets/pattern.jpeg);
             background-repeat: repeat;
-            background-size:contain;
+            background-size: contain;
         }
 
         footer {
             background-color: lightpink;
-            /* padding-right: 100px; */
             text-align: right;
             font-family: 궁서체;
             height: 50px;
             width: 100%;
             right: 0px;
             bottom: 0px;
-            position:fixed;
+            position: fixed;
             padding-right: 10px;
         }
 
@@ -75,9 +83,7 @@
 
         .profile {
             border: 1px solid black;
-        }
-        .pic{
-            
+            background-color: white;
         }
 
         .profile tr td:first-child {
@@ -86,7 +92,7 @@
         }
 
         .profile #merged {
-            background-color: bisque;
+            background-color: rgb(255, 255, 255);
             color: black;
         }
 
@@ -95,31 +101,48 @@
             color: yellow;
         }
 
-        .profile #pink:hover {
+        #pink:hover {
             background-color: #ff9bff;
             color: white;
-            cursor:pointer;
+            width: fit-content;
         }
-        .top{
-            position:fixed;
+
+        #pink:hover::after {
+            content: " #ff9bff";
+        }
+
+        .top {
+            position: fixed;
             margin-left: 10px;
             padding: 10px;
-            border:1px solid black;
+            border: 1px solid black;
             background-color: rgba(224, 255, 255, 0.637);
         }
-        #profileImg{
+
+        #profileImg {
+            background-color: bisque;
             background-image: url("assets/pic.jpeg");
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
         }
-        .fn p{
-            position:relative;
-        }
-        #hobby>ul{
-            list-style:square;
+
+        .fn p {
+            position: relative;
         }
 
+        #hobby>ul {
+            list-style: square;
+        }
+
+        #questionLabel {
+            border: 1px dashed blue;
+            padding: 5px;
+            text-align: center;
+        }
+        #button{
+
+        }
     </style>
 </head>
 
@@ -131,10 +154,11 @@
         <nav>
             <div>
                 <h3>연결링크</h3>
-                <ul style="margin-left: 0; padding: 15px;">
+                <ul>
                     <li id="gitlink"><a href="https://github.com/CallmeEterHist" target="_blank">Github</a></li>
                     <li id="tistorylink"><a href="https://callmeeh.tistory.com/" target="_blank">Tistory</a></li>
-                    <li id="notionlink"><a href="https://www.notion.so/Main-29abab4d001c80fbbca4f1f0ca80ee5a" target="_blank">Notion</a></li>
+                    <li id="notionlink"><a href="https://www.notion.so/Main-29abab4d001c80fbbca4f1f0ca80ee5a"
+                            target="_blank">Notion</a></li>
                     <li id="iglink"><a href="https://www.instagram.com/twkim_aka_eh" target="_blank">IG</a></li>
                 </ul>
             </div>
@@ -149,8 +173,7 @@
             <div class="descript" id="des 1">
                 <table class="profile">
                     <tr>
-                        <th colspan="2" id="profileImg"></th>
-                        <th><br><br><br><br><br><br><br></th>
+                        <th colspan="2" id="profileImg"><br><br><br><br><br><br><br></th>
                     </tr>
                     <tr>
                         <td>이름</td>
@@ -176,19 +199,17 @@
                         <td>ENFP</td>
                     </tr>
                     <tr>
+                        <td>종교</td>
+                        <td>무교</td>
+                    </tr>
+                    <tr>
                         <td>병역</td>
-                        <td id="marine">대한민국 해병대 兵1280期<sup><a href="#fn_4" id="fn-4">[4]</a></sup></td>
-                    </tr>
-                    <tr>
-                        <td>최애색</td>
-                        <td id="pink">핑크(마우스를 올려 확인)</td>
-                    </tr>
-                    <tr>
-                        <td>최애구단</td>
-                        <td id="ssg"><a href="https://www.ssglanders.com/main" target="_blank">SSG 랜더스</a></td>
+                        <td id="marine"><img src="assets/marine.svg" alt="" height="30px">대한민국 해병대 兵1280期<sup><a
+                                    href="#fn_4" id="fn-4">[4]</a></sup></td>
                     </tr>
                 </table>
-            </div><hr>
+            </div>
+            <hr>
             <div class="index" id="index 2">
                 <h3>II. 취미</h3>
             </div>
@@ -201,38 +222,134 @@
                     </ul>
                     <li>스포츠</li>
                     <ul>
-                        <li>헬스</li>
+                        <li>헬스<sup><a href="#fn_6" id="fn-6">[6]</a></sup></li>
                         <li>야구</li>
                         <li>축구</li>
                     </ul>
                     <li>etc.</li>
                     <ul>
-                        <li>리그 오브 레전드<sup><a href="#fn_6" id="fn-6">[6]</a></sup></li>
+                        <li>리그 오브 레전드<sup><a href="#fn_7" id="fn-7">[7]</a></sup></li>
                         <li>드라이브</li>
                     </ul>
                 </ol>
-            </div><hr>
+            </div>
+            <hr>
             <div class="index" id="index 3">
                 <h3>III. 기타</h3>
             </div>
             <div class="descript" id="des 3">
-
-            </div><hr>
-            <div class="index" id="index 4"><h3>IV. 주석</h3></div>
+                <ul>
+                    <li id="pink">최애색은 '핑크색'이다. (마우스를 올려 rgb확인)</li>
+                    <li>가장 좋아하는 숫자는 '4'이다.</li>
+                    <li>최애구단은 <a href="https://www.ssglanders.com/main" target="_blank">SSG 랜더스</a>이다.<sup><a
+                                href="#fn_8" id="fn-8">[8]</a></sup></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <hr>
+            <div class="index" id="index 4">
+                <h3>IV. 주석</h3>
+            </div>
             <div class="descript" id="des 4">
                 <ol type="1" class="fn">
-                    <a href="#fn-1" id="fn_1"><li>성 김(金), 클 태(泰), 완전할 완(完)</li></a>
-                    <a href="#fn-2" id="fn_2"><li>을지대학교(乙支大學校, EULJI UNIVERSITY)는 대전광역시와 경기도 성남시, 경기도 의정부시에 위치한 4년제 사립대학으로, 을지대학교의료원을 바탕으로 성장한 보건 · 의료 특성화 대학이다.</li></a>
-                    <a href="#fn-3" id="fn_3"><li>21학번. 1기로 입학하였다. 2025년도에는 학과의 4대 학생회장을 맡았다.</li></a>
-                    <a href="#fn-4" id="fn_4"><li>2022년 3월 28일에 입대하였고, 2023년 9월 27일에 전역하였다. 6여단 백령도에서 근무하였다.</li></a>
-                    <a href="#fn-5" id="fn_5"><li>이름의 '태'를 딴 EH라는 예명이 있으며, EternerHistory라는 의미를 부여하였다.</li></a>
-                    <a href="#fn-6" id="fn_6"><li>포지션은 서포터이며 골드 티어에 위치해있다.</li></a>
-                    <a href="#fn-7" id="fn_7"><li></li></a>
-                    <a href="#fn-8" id="fn_8"><li></li></a>
+                    <a href="#fn-1" id="fn_1">
+                        <li>성 김(金), 클 태(泰), 완전할 완(完)</li>
+                    </a>
+                    <a href="#fn-2" id="fn_2">
+                        <li>을지대학교(乙支大學校, EULJI UNIVERSITY)는 대전광역시와 경기도 성남시, 경기도 의정부시에 위치한 4년제 사립대학으로, 을지대학교의료원을 바탕으로 성장한
+                            보건 · 의료 특성화 대학이다.</li>
+                    </a>
+                    <a href="#fn-3" id="fn_3">
+                        <li>21학번. 1기로 입학하였다. 2025년도에는 학과의 4대 학생회장을 맡았다.</li>
+                    </a>
+                    <a href="#fn-4" id="fn_4">
+                        <li>2022년 3월 28일에 입대하였고, 2023년 9월 27일에 전역하였다. 6여단 백령도에서 근무하였다.</li>
+                    </a>
+                    <a href="#fn-5" id="fn_5">
+                        <li>이름의 '태'를 딴 EH라는 예명이 있으며, EternerHistory라는 의미를 부여하였다.</li>
+                    </a>
+                    <a href="#fn-6" id="fn_6">
+                        <li>3대 340</li>
+                    </a>
+                    <a href="#fn-7" id="fn_7">
+                        <li>포지션은 서포터이며 골드 티어에 위치해있다.</li>
+                    </a>
+                    <a href="#fn-8" id="fn_8">
+                        <li>2011년 SK 시절부터 좋아했으며, 현재 가장 좋아하는 선수는 정준재이다.</li>
+                    </a>
+                    <a href="#fn-8" id="fn_8">
+                        <li></li>
+                    </a>
                 </ol>
             </div>
-            <div class="index" id="index 5"><h3>V. 감상평</h3></div>
-            <div class="descript" id="des 5"></div>
+            <hr>
+            <div class="index" id="index 5">
+                <h3>V. 감상평</h3>
+            </div>
+            <div class="descript" id="des 5">
+                <form action="" method="get">
+
+                    <fieldset id="questionForm">
+                        <legend>감상평을 작성해주세요.</legend>
+                        <div id="questionLabel">
+                            <p>아래 내용을 잘 읽고, 물음에 답해주세요.</p>
+                            <p>여러분의 소중한 답변은 저에게 큰 힘이 됩니다.</p>
+                        </div>
+                        <ol>
+                            <li>당신의 이름은 무엇인가요?</li>
+                            <div class="question">
+                                <input type="text" placeholder="이름을 입력하세요.">
+                            </div><br>
+                            <li>당신의 직업은 무엇인가요?</li>
+                            <div class="question">
+                                <select name="job" id="job">
+                                    <option value="null" disabled selected>직업을 선택해주세요.</option>
+                                    <option value="not">무직</option>
+                                    <option value="student">학생</option>
+                                    <option value="officeman">직장인</option>
+                                    <option value="proffesor">교수</option>
+                                </select>
+                            </div><br>
+                            <li>당신이 이 문서를 읽은 시점은 언제인가요?</li>
+                            <div class="question">
+                                <input type="date">
+                            </div><br>
+                            <li>문서의 내용이 재미있었나요?</li>
+                            <div class="question">
+                                <input type="radio" name="fun" id="fun 1" value="fun 1"><label for="fun 1">전혀 재밌지 않았다.</label><br>
+                                <input type="radio" name="fun" id="fun 2"><label for="fun 2">약간 재밌지 않았다.</label><br>
+                                <input type="radio" name="fun" id="fun 3" checked><label for="fun 3">보통이었다.</label><br>
+                                <input type="radio" name="fun" id="fun 4"><label for="fun 4">약간 재밌었다.</label><br>
+                                <input type="radio" name="fun" id="fun 5"><label for="fun 5">매우 재밌었다.</label><br>
+                            </div><br>
+                            <li>문서가 읽기 쉽게 짜여있었나요?</li>
+                            <div class="question">
+                                <input type="radio" name="easy" id="easy 1"><label for="easy 1">전혀 읽기 쉽지
+                                    않았다.</label><br>
+                                <input type="radio" name="easy" id="easy 2"><label for="easy 2">약간 읽기 쉽지
+                                    않았다.</label><br>
+                                <input type="radio" name="easy" id="easy 3" checked><label
+                                    for="easy 3">보통이었다.</label><br>
+                                <input type="radio" name="easy" id="easy 4"><label for="easy 4">약간 읽기 쉬웠다.</label><br>
+                                <input type="radio" name="easy" id="easy 5"><label for="easy 5">매우 읽기 쉬웠다.</label><br>
+                            </div><br>
+                            <li>마지막으로 제작자에게 하고 싶은 말이 있다면 작성해주세요.</li>
+                            <div class="question">
+                                <textarea name="comment" id="comment" cols="30"></textarea>
+                            </div>
+                        </ol>
+                        <div id="button">
+                            <button type="reset">초기화</button>
+                            <button type="submit">제출</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
             <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         </article>
         <aside>
