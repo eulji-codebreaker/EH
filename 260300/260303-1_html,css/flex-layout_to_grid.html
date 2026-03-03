@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            display: grid;
+            grid-template-rows: 10px,100%,10px;
+        }
+        body>header{
+            grid-column: 1/4;
+            grid-row: 1/2;
+            border:1pt solid red;
+            padding:10px;
+            font-size: 200%;
+            background: gray;
+        }
+        main{
+            grid-column: 1/4;
+            grid-row: 2/3;
+            border: 1pt solid blue;
+            display: grid;
+            grid-template-columns: 180px 1fr 180px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        nav{
+            grid-column: 1/2;
+            border: 1pt dashed green;
+            padding: 10px; 
+            margin: 10px; 
+            background: gray;
+        }
+        .content{
+            grid-column: 2/3;
+            border: 1pt dashed black;
+            padding: 10px;
+            margin: 10px; 
+            background: gray;
+        }
+        aside{
+            grid-column: 3/4;
+            border: 1pt dashed green;
+            padding: 10px;
+            margin: 10px;  
+            background: gray;
+        }
+        body>footer{
+            grid-column: 1/4;
+            grid-row: 3/4;
+            border:1pt solid red;
+            padding:10px;
+            font-size: 200%;
+            background: gray;
+        }
+        *{display:flex;
+        justify-content: spa;}
+        
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h4>머리부(Header)</h4>
+    </header>
+    <main>
+        <nav>
+            <b>네비게이션(Nav)</b>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+        <div class="content">
+            <h2>메인 콘텐츠(Main)</h2>
+            <div id="discription">
+                <p>양옆은 고정폭, 가운데는 가변폭!</p>
+            </div>
+            <p>Hint. 가운데 영역은 <small>flex: 1</small>로 남는 공간을 차지합니다.</p>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+        </div>
+        <aside>
+            <b>사이드바(Aside)</b>
+            <p>공지/광고/프로필 등</p>
+        </aside>
+    </main>
+    <footer>
+        <h4>바닥부(Footer)</h4>
+    </footer>
+</body>
+
+</html>

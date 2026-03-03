@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <style>
+    .box { width: 520px; border: 2px solid #333; padding: 12px; margin: 12px 0; font-size: 20px; }
+    .title { font-weight: 700; margin-bottom: 8px; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14px; opacity: .8; }
+  </style>
+</head>
+<body>
+  <h2>아랍어: direction 비교</h2>
+
+  <div class="box" style="direction: rtl; text-align: start;">
+    <div class="title">1) direction: rtl; text-align: start (자연스러움)</div>
+    مرحبا بكم 2026 (test) في CSS
+    <div class="mono">RTL + start(=오른쪽)</div>
+  </div>
+
+  <div class="box" style="direction: ltr; text-align: start;">
+    <div class="title">2) direction: ltr; text-align: start (LTR로 강제)</div>
+    مرحبا بكم 2026 (test) في CSS
+    <div class="mono">LTR + start(=왼쪽)</div>
+  </div>
+
+  <div class="box" style="direction: rtl; text-align: end;">
+    <div class="title">3) direction: rtl; text-align: end</div>
+    مرحبا بكم 2026 (test) في CSS
+    <div class="mono">RTL + end(=왼쪽)</div>
+  </div>
+
+  <div class="box" style="direction: ltr; text-align: end;">
+    <div class="title">4) direction: ltr; text-align: end</div>
+    مرحبا بكم 2026 (test) في CSS
+    <div class="mono">LTR + end(=오른쪽)</div>
+  </div>
+</body>
+</html>
