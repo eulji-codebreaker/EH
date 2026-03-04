@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{box-sizing: border-box;}
+        body{
+            width:1920px; height:1080px;
+        }
+        #box{
+            width: 320px;
+            height: 320px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            justify-content: space-around;
+            align-content: space-around;
+        }
+        #cir1, #cir2, #cir3{
+            grid-row: 1/1;
+            width:32px;
+            height:32px;
+            border-radius: 999px;
+        }
+        #cir1{background-color: #e3ff92;}
+        #cir2{background-color: #92f8ff;}
+        #cir3{background-color: #ff9292;}
+    </style>
+</head>
+<body>
+    <div id="box"><img src="source/ae952014cdd66cc9657b0dc753deb0628a21778a.jpg" alt="" width="320px" height="320px">
+        <div id="text">인테리어 디자인</div>
+        <div id="cir1"></div>
+        <div id="cir2"></div>
+        <div id="cir3"></div>
+    </div>
+</body>
+</html>
