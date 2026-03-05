@@ -1,40 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        *{box-sizing: border-box;}
-        body{
-            width:1920px; height:1080px;
+        * {
+            box-sizing: border-box;
         }
-        #box{
+
+        body {
+            width: 1920px;
+            height: 1080px;
+        }
+
+        #box {
+            position: absolute;
             width: 320px;
             height: 320px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
-            justify-content: space-around;
-            align-content: space-around;
+            left: 16px;
+            top: 16px;
+
+            background-image: url(source/ae952014cdd66cc9657b0dc753deb0628a21778a.jpg);
+            background-position: center;
         }
-        #cir1, #cir2, #cir3{
-            grid-row: 1/1;
-            width:32px;
-            height:32px;
+
+        #text {
+            position: absolute;
+            width: 161px;
+            height: 29px;
+            left: 16px;
+            top: 16px;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 29px;
+            color: white;
+        }
+
+        #cir1 {
+            position: absolute;
+            width: 32px;
+            height: 32px;
+            left: 272px;
+            top: 272px;
+
+            background: #FF9292;
+            border-radius: 999px;
+
+        }
+
+        #cir2 {
+            position: absolute;
+            width: 32px;
+            height: 32px;
+            left: 16px;
+            top: 272px;
+
+            background: #92F8FF;
             border-radius: 999px;
         }
-        #cir1{background-color: #e3ff92;}
-        #cir2{background-color: #92f8ff;}
-        #cir3{background-color: #ff9292;}
+
+        #cir3 {
+            position: absolute;
+            width: 32px;
+            height: 32px;
+            left: 272px;
+            top: 16px;
+
+            background: #E3FF92;
+            border-radius: 999px;
+        }
     </style>
 </head>
+
 <body>
-    <div id="box"><img src="source/ae952014cdd66cc9657b0dc753deb0628a21778a.jpg" alt="" width="320px" height="320px">
+    <div id="box">
         <div id="text">인테리어 디자인</div>
         <div id="cir1"></div>
         <div id="cir2"></div>
         <div id="cir3"></div>
     </div>
 </body>
+
 </html>

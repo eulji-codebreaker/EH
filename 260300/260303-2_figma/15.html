@@ -1,17 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        *{box-sizing: border-box;}
-        body{
-            width:1920px; height:1080px;
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 1920px;
+            height: 1080px;
+            margin: 0;
+            padding-left: 16px;
+            padding-top: 16px;
+        }
+
+
+        #title {
+            position: absolute;
+            left: 16px;
+            top: 16px;
+            width: 67px;
+            height: 29px;
+            font-size: 24px;
+            line-height: 29px;
+            font-weight: 700;
+            color: #000;
+        }
+
+        #idframe {
+            position: absolute;
+            left: 16px;
+            top: 69px;
+            width: 278px;
+            height: 67px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0;
+            gap: 8px;
+        }
+
+        #idLabel {
+            width: 45px;
+            height: 19px;
+
+            font-size: 16px;
+            line-height: 19px;
+            font-weight: 400;
+            color: black;
+        }
+
+        #idbox {
+            box-sizing: border-box;
+            width: 278px;
+            height: 40px;
+
+            border: 1px solid #C3C3C3;
+            border-radius: 8px;
+            background: transparent;
+        }
+
+        #pwdframe {
+            position: absolute;
+            left: 16px;
+            top: 160px;
+            width: 278px;
+            height: 67px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0;
+            gap: 8px;
+        }
+
+        #pwLabel {
+            width: 59px;
+            height: 19px;
+
+            font-size: 16px;
+            line-height: 19px;
+            font-weight: 400;
+            color: #000;
+        }
+
+        #pwdbox {
+            box-sizing: border-box;
+            width: 278px;
+            height: 40px;
+
+            border: 1px solid #C4C4C4;
+            border-radius: 8px;
+            background: transparent;
+        }
+
+        #button {
+            position: absolute;
+            left: 16px;
+            top: 251px;
+            width: 278px;
+            height: 48px;
+
+            background: #17B75E;
+            border-radius: 8px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #login {
+            font-size: 20px;
+            line-height: 24px;
+            font-weight: 700;
+            color: #fff;
         }
     </style>
 </head>
+
 <body>
-    
+    <div id="loginPage">
+        <div id="title">로그인</div>
+
+        <div id="idframe">
+            <div id="idLabel">아이디</div>
+            <div id="idbox"></div>
+        </div>
+
+        <div id="pwdframe">
+            <div id="pwLabel">비밀번호</div>
+            <div id="pwdbox"></div>
+        </div>
+
+        <div id="button">
+            <div id="login">로그인</div>
+        </div>
+    </div>
 </body>
+
 </html>

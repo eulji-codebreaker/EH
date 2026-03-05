@@ -1,17 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        *{box-sizing: border-box;}
-        body{
-            width:1920px; height:1080px;
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 1920px;
+            height: 1080px;
+        }
+
+
+        #box {
+            position: relative;
+            width: 1920px;
+            height: 1080px;
+        }
+
+        #pink {
+            position: absolute;
+            left: 16px;
+            top: 16px;
+            width: 120px;
+            height: 170px;
+            background: #FFB9B9;
+            border-radius: 8px;
+        }
+
+        #cir {
+            position: absolute;
+            left: 88px;
+            top: 138px;
+            width: 24px;
+            height: 24px;
+            background: #D9D9D9;
+            border-radius: 50%;
+        }
+
+        #text {
+            position: absolute;
+            left: 24px;
+            top: 194px;
+            width: 104px;
+            height: 30px;
+
+            font-size: 12px;
+            line-height: 15px;
+            font-weight: 400;
+            color: black;
         }
     </style>
+    </style>
 </head>
+
 <body>
-    
+    <div id="box">
+        <div id="pink">
+            <div id="cir"></div>
+        </div>
+        <div id="text">나른한 점심시간, 밖에서 밥먹기</div>
+    </div>
 </body>
+
 </html>

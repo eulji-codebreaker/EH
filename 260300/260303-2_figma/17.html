@@ -1,17 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        *{box-sizing: border-box;}
-        body{
-            width:1920px; height:1080px;
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 1920px;
+            height: 1080px;
+        }
+
+        #box {
+            position: absolute;
+            left: 16px;
+            top: 16px;
+            width: 300px;
+            height: 250px;
+            background: #FFB9B9;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        #img {
+            position: absolute;
+            left: -38px;
+            top: -87px;
+            width: 338px;
+            height: 450px;
+            object-fit: cover;
+        }
+
+        #black {
+            position: absolute;
+            left: 0px;
+            top: 194px;
+            width: 300px;
+            height: 56px;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        #text {
+            position: absolute;
+            left: 8px;
+            top: 208px;
+            width: 82px;
+            height: 15px;
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 15px;
+            color: white;
+        }
+
+        #name {
+            position: absolute;
+            left: 8px;
+            top: 227px;
+            width: 34px;
+            height: 15px;
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 15px;
+            color: #D1D1D1;
+        }
+
+        #cir {
+            position: absolute;
+            left: 260px;
+            top: 16px;
+            width: 24px;
+            height: 24px;
+            background: #D9D9D9;
+            border-radius: 50%;
         }
     </style>
 </head>
+
 <body>
-    
+    <div id="box">
+        <img id="img" src="source/80f96fff3c156d5cd401a6ab29061ecd75c5c704.jpg" alt="">
+        <div id="cir"></div>
+        <div id="black"></div>
+        <div id="text">새로운 시작!</div>
+        <div id="name">김작가</div>
+    </div>
 </body>
+
 </html>

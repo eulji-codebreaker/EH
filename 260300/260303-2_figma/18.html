@@ -1,17 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        *{box-sizing: border-box;}
-        body{
-            width:1920px; height:1080px;
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 1920px;
+            height: 1080px;
+        }
+
+        #box {
+            position: absolute;
+            left: 16px;
+            top: 16px;
+            width: 332px;
+            height: 100px;
+            background: #FFE4E4;
+            border-radius: 8px;
+        }
+
+        #pink {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 160px;
+            height: 100px;
+            background: #FFB9B9;
+            border-radius: 8px;
+        }
+
+        #hellobox {
+            position: absolute;
+            left: 160px;
+            top: 0px;
+            width: 172px;
+            height: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 8px;
+            gap: 8px;
+            box-sizing: border-box;
+        }
+
+        #hello {
+            width: 96px;
+            height: 19px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 2px 8px;
+            gap: 10px;
+            background: #FFB9B9;
+            border-radius: 2px;
+            box-sizing: border-box;
+        }
+
+        #helloText {
+            width: 55px;
+            height: 15px;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 15px;
+            color: white;
+        }
+
+        #good1 {
+            width: 123px;
+            height: 19px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+        }
+
+        #good2 {
+            width: 113px;
+            height: 17px;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
+            color: #8B8B8B;
         }
     </style>
 </head>
+
 <body>
-    
+    <div id="box">
+        <div id="pink"></div>
+
+        <div id="hellobox">
+            <div id="hello">
+                <div id="helloText">반가워요!</div>
+            </div>
+
+            <div id="good1">좋은하루보내세요!</div>
+            <div id="good2">날씨가 좋네요!</div>
+        </div>
+    </div>
 </body>
+
 </html>

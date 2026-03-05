@@ -1,17 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        *{box-sizing: border-box;}
-        body{
-            width:1920px; height:1080px;
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 1920px;
+            height: 1080px;
+        }
+
+        #box {
+            box-sizing: border-box;
+            position: absolute;
+            left: 16px;
+            top: 16px;
+            width: 336px;
+            height: 148px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 24px;
+            gap: 8px;
+            background: white;
+            border: 1px solid #C2C2C2;
+            border-radius: 8px;
+        }
+
+        #text {
+            width: 288px;
+            height: 19px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+            color: black;
+        }
+
+        #button {
+            width: 288px;
+            height: 48px;
+            background: #17B75E;
+            border-radius: 8px;
+            position: relative;
+        }
+
+        #login {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 56px;
+            height: 24px;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 24px;
+            color: white;
+        }
+
+        #links {
+            width: 235px;
+            height: 17px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 0px;
+            gap: 8px;
+        }
+
+        #id {
+            width: auto;
+            height: 17px;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 17px;
+        }
+
+        #pwd {
+            width: auto;
+            height: 17px;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 17px;
+        }
+
+        #register {
+            width: auto;
+            height: 17px;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 17px;
+        }
+
+        #line1, #line2 {
+            width: 16px;
+            height: 0px;
+            border: 1px solid #D3D5D7;
+            transform: rotate(90deg);
         }
     </style>
 </head>
+
 <body>
-    
+    <div id="box">
+        <div id="text">사이트를 더 안전하고 편리하게 이용하세요.</div>
+
+        <div id="button">
+            <div id="login">로그인</div>
+        </div>
+
+        <div id="links">
+            <div id="id">아이디 찾기</div>
+            <div id="line1"></div>
+            <div id="pwd">비밀번호 찾기</div>
+            <div id="line2"></div>
+            <div id="register">회원가입</div>
+        </div>
+    </div>
 </body>
+
 </html>
