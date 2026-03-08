@@ -1,29 +1,33 @@
 function Group(prof, max){
     this.prof=prof;
     this.max=max;
-    function initiallize(){}
+    this.member=new Array(1);
 }
 const makeGroup={
     prof:undefined,
     max:null,
-    member:new Array(1),
     initiallize:function(){this.member[0]=(this.prof);},
-    add:function(person){if(this.member[this.max-1]===undefined)this.member.push(person)}
+    add:function(person){if(this.member.length<this.max+1)this.member.push(person);else console.log('정원을 초과했습니다.')},
+    remove:function(index){
+        if(index===0)console.log('교수님은 삭제할 수 없습니다.')
+        else if(index>this.member.length-1){console.log(`${index}번째 학생은 존재하지 않습니다.`)}
+        else (this.member.splice(index,1))
+    }
 }
 Group.prototype=makeGroup;
 var math=new Group('이순신', 30);
-var eng=new Group('오바마', 50);
-
-console.log(math.prof);
-console.log(math.member);
 math.initiallize();
-console.log(math.member);
-console.log(math.member[0]);
-
-console.log(eng);
+var eng=new Group('오바마', 30);
 eng.initiallize();
+
+console.log(math);
 console.log(eng);
-console.log(eng.member[0]);
+for(let i=0;i<31;i++){eng.add(`student${i+1}`)};
 console.log(eng.member);
-eng.add('김태완');
+eng.remove(0);
 console.log(eng.member);
+eng.remove(30);
+console.log(eng.member);
+eng.remove(15);
+console.log(eng.member);
+console.table(eng);
