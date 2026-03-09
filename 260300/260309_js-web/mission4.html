@@ -96,12 +96,53 @@
             $title.textContent = 'ID로 선택된 제목!';
         }
         function selectByClass() {
-            var box = document.querySelector(".box");
-            box.innerHTML = "클래스로 선택된 첫 번째 박스!";
-            box.style.backgroundColor = "lightgreen";
+            const $box = document.querySelector(".box");
+            $box.innerHTML = "클래스로 선택된 첫 번째 박스!";
+            $box.style.backgroundColor = "lightgreen";
         }
-        function selectByTag(){
-            
+        function selectByTag() {
+            var $p = document.querySelector("p");
+            $p.innerHTML = "태그로 선택된 첫 번째 p 요소!";
+            $p.style.border = "2px solid #007bff";
+        }
+        function selectSpecial() {
+            const $special = document.querySelectorAll(".special");
+
+            $special.forEach((l, i) => {
+                l.innerHTML = "특별 클래스 " + (i + 1) + "번!";
+                l.style.fontWeight = "bold";
+                l.style.color = "#856404";
+            });
+        }
+        function selectFirst() {
+            const $first = document.querySelector(".container>.box");
+            $first.innerHTML = "첫 번째 컨테이너의 첫 번째 박스!";
+            $first.style.backgroundColor = "#cce5ff";
+        }
+        function selectAll() {
+            const $all = document.querySelectorAll(".box");
+            $all.forEach((l, i) => {
+                l.innerHTML = "모든 박스 " + (i + 1) + "번 변경!";
+                l.style.backgroundColor = "#ffccff";
+            })
+        }
+        function selectComplex() {
+            const $complex = document.querySelectorAll(".container p.box:not(.special)");
+            $complex.forEach((l) => {
+                l.innerHTML = "복합 선택자로 선택됨!";
+                l.style.backgroundColor = "#ccffcc";
+                l.style.border = "2px dashed #28a745";
+            })
+        }
+        function selectInput() {
+            const $text = document.querySelector('input[type="text"]');
+            const $email = document.querySelector('input[type="email"]');
+
+            $text.value = "querySelector로 설정된 값";
+            $text.style.backgroundColor = "#fff3cd";
+
+            $email.value = "test@example.com";
+            $email.style.backgroundColor = "#d1ecf1";
         }
     </script>
 </body>
