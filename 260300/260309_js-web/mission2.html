@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .box {
+            width: 500px;
+            height: 80px;
+            margin: 10px;
+            border: 1px solid gray;
+            font-size: 150%;
+            line-height: 80px;
+            padding-left: 18px;
+            background-color: white;
+        }
+
+        button {
+            width: 160px;
+            height: 50px;
+            background-color: blue;
+            color: white;
+            font-weight: 900;
+
+        }
+
+        #list {
+            width: 500px;
+        }
+
+        #group {
+            width: 500px;
+            display: flex;
+            align-items: bottom;
+            justify-content: space-around;
+        }
+
+        button:hover {
+            cursor: pointer;
+            background-color: darkblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box" id="box1">첫 번째 문단입니다.</div>
+    <div class="box" id="box2">두 번째 문단입니다.</div>
+    <div class="box" id="box3">세 번째 문단입니다.</div>
+    <ul id="list">
+        <li>
+            첫 번째 목록
+        </li>
+        <li>
+            두 번째 목록
+        </li>
+        <li>
+            세 번째 목록
+        </li>
+        <li>
+            네 번째 목록
+        </li>
+    </ul>
+    <div id="group">
+        <button onclick="allContextSelect();">모든 문단 선택</button>
+        <button onclick="allListSelect();">모든 목록 선택</button>
+        <button onclick="onlyFirstList()">첫 번째 목록만 선택</button>
+    </div>
+
+    <script>
+        
+        function allContextSelect() {
+            const $boxs = document.querySelectorAll('.box');
+            $boxs.forEach((li, idx) => {
+                li.textContent = `선택된 문단${idx + 1}`;
+                li.style.backgroundColor = 'lightgreen';
+            })
+        }
+        function allListSelect() {
+            const $list = document.querySelectorAll('#list>li');
+            $list.forEach((li, idx) => {
+                li.textContent = `새로운 목록 항목 ${idx + 1}`;
+                li.style.color='blue';
+                li.style.fontWeight=700;
+            })
+        }
+        function onlyFirstList() {
+            const $box=document.querySelector('.box');
+            $box.textContent='첫 번째 문단만 선택되었습니다!';
+            $box.style.backgroundColor='lightblue';
+        }
+    </script>
+</body>
+
+</html>
