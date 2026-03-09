@@ -90,15 +90,18 @@
     </div>
 
     <script>
-        function selectById(){
-            const $title=document.getElementById('title');
-            $title.style.color='red';
-            $title.textContent='ID로 선택된 제목!';
+        function selectById() {
+            const $title = document.getElementById('title');
+            $title.style.color = 'red';
+            $title.textContent = 'ID로 선택된 제목!';
         }
-        function selectByClass(){
-            const $class=document.getElementsByClassName('box');
-            console.log($class.innerText);
-            $class.innerText=`클래스로 선택된 ${$class.innerText}!`;
+        function selectByClass() {
+            var box = document.querySelector(".box");
+            box.innerHTML = "클래스로 선택된 첫 번째 박스!";
+            box.style.backgroundColor = "lightgreen";
+        }
+        function selectByTag(){
+            
         }
     </script>
 </body>
