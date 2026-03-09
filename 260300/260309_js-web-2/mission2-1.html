@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h3>기존 내용</h3>
+        <!--<p>안녕하세요! createElement로 만든 요소입니다.</p>
+        <span>이 텍스트는 span입니다.</span>-->
+    </div>
+    <button onclick="elementGenerate()">요소 생성하기</button>
+    <script>
+        function elementGenerate() {
+            const $targetDiv = document.querySelector('div');
+
+            const $newDiv = document.createElement('div');
+
+            const $p = document.createElement('p');
+            $p.textContent = '안녕하세요! createElement로 만든 요소입니다.';
+
+            const $span = document.createElement('span');
+            $span.textContent = '이 텍스트는 span입니다.';
+
+            $newDiv.append($p, $span);
+            $targetDiv.appendChild($newDiv);
+        }
+    </script>
+</body>
+
+</html>
