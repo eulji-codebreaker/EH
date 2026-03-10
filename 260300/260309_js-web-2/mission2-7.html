@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+      .container {
+        border: 2px solid red;
+        padding: 15px;
+        margin: 10px;
+      }
+      .item {
+        background: lightcoral;
+        padding: 10px;
+        margin: 5px;
+        border: 1px solid darkred;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container" class="container">
+      <div class="item" id="child1">삭제할 자식 1</div>
+      <div class="item" id="child2">삭제할 자식 2</div>
+      <div class="item" id="child3">삭제할 자식 3</div>
+      <div class="item" id="child4">삭제할 자식 4</div>
+    </div>
+
+    <button onclick="removeFirstChild()">첫 번째 자식 삭제</button>
+    <button onclick="removeSecondChild()">두 번째 자식 삭제</button>
+    <button onclick="removeThirdChild()">세 번째 자식 삭제</button>
+    <button onclick="removeLastChild()">마지막 자식 삭제</button>
+
+    <script>
+        const container = document.getElementById("container");
+      function removeFirstChild() {
+        const child = document.getElementById("child1");
+        container.removeChild(child);
+      }
+
+      function removeSecondChild() {
+        const child = document.getElementById("child2");
+        container.removeChild(child);
+      }
+
+      function removeThirdChild() {
+        const child = document.getElementById("child3");
+        container.removeChild(child);
+      }
+
+      function removeLastChild() {
+        const child = document.getElementById("child4");
+        container.removeChild(child);
+      }
+    </script>
+  </body>
+</html>

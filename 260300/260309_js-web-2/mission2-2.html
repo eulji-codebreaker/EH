@@ -59,7 +59,7 @@
         function testBefore() {
             const $before = document.createElement("div");
             $before.textContent = "before()로 추가된 요소";
-            $before.className = "highlight";
+            $before.classList.add("highlight");
             $target.before($before);
         }
         function testAfter() {

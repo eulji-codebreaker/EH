@@ -37,6 +37,31 @@
     <div id="target">
         <p>기존 내용</p>
     </div>
+
+    <script>
+        const $target = document.getElementById("target");
+        const $parent = $target.parentNode;
+
+        const $beforebegin = document.createElement("div");
+        $beforebegin.textContent = "beforebegin - 앞 형제";
+        $beforebegin.classList.add("before");
+        $parent.insertBefore($beforebegin, $target);
+
+        const $afterbegin = document.createElement("div");
+        $afterbegin.textContent = "afterbegin - 첫 자식";
+        $afterbegin.classList.add("begin");
+        $target.insertBefore($afterbegin, $target.firstChild);
+
+        const $beforeend = document.createElement("div");
+        $beforeend.textContent = "beforeend - 마지막 자식";
+        $beforeend.classList.add("end");
+        $target.appendChild($beforeend);
+
+        const $afterend = document.createElement("div");
+        $afterend.textContent = "afterend - 뒤 형제";
+        $afterend.classList.add("after");
+        $parent.insertBefore($afterend, $target.nextSibling);
+    </script>
 </body>
 
 </html>

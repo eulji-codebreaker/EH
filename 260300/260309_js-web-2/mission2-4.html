@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+      .change {
+        background: red;
+        color: white;
+        padding: 10px;
+        margin: 5px;
+      }
+      .new {
+        background: green;
+        color: white;
+        padding: 10px;
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p class="change" id="target1">교체될 요소 1</p>
+      <p class="change" id="target2">교체될 요소 2</p>
+      <p class="change" id="target3">교체될 요소 3</p>
+    </div>
+
+    <button onclick="replaceWithElement()">요소로 교체</button>
+    <button onclick="replaceWithText()">텍스트로 교체</button>
+    <button onclick="replaceWithHTML()">HTML로 교체</button>
+
+    <script>
+      const $t1=document.querySelector('#target1');
+      const $t2=document.querySelector('#target2');
+      const $t3=document.querySelector('#target3');
+      
+      function replaceWithElement() {
+        const ele=document.createElement('div');
+        ele.innerText='요소로 교체됨';
+        ele.classList.add('new');
+        $t1.replaceWith(ele);
+      }
+
+      function replaceWithText() {
+        const ele=document.createElement('p');
+        ele.innerText='텍스트로 교체됨'
+        $t2.replaceWith(ele);
+      }
+
+      function replaceWithHTML() {
+        const ele=document.createElement('div');
+        ele.innerHTML='<s>HTML요소로 교체됨</s>';
+        ele.classList.add('new');
+        $t3.replaceWith(ele);
+      }
+    </script>
+  </body>
+</html>

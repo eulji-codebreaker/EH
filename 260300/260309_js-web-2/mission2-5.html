@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+        .container {
+            border: 2px solid blue;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        .change {
+            background: red;
+            color: white;
+            padding: 5px;
+            margin: 3px;
+        }
+
+        .new {
+            background: green;
+            color: white;
+            padding: 5px;
+            margin: 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container" class="container">
+        <p class="change" id="child1">교체될 자식 1</p>
+        <p class="change" id="child2">교체될 자식 2</p>
+        <p class="change" id="child3">교체될 자식 3</p>
+    </div>
+
+    <button onclick="replaceFirst()">첫 번째 교체</button>
+    <button onclick="replaceSecond()">두 번째 교체</button>
+    <button onclick="replaceThird()">세 번째 교체</button>
+
+    <script>
+        const $container = document.getElementById("container");
+        function replaceFirst() {
+            const first=document.createElement('p');
+            first.innerText='첫번째교체되었음';
+            first.classList.add('new');
+            $container.replaceChild(first,$container.firstElementChild);
+        }
+
+        function replaceSecond() {
+            const second=document.createElement('span');
+            second.innerText='두번째 교체되었음(span)';
+            second.classList.add('new');
+            $container.replaceChild(second,$container.childNodes[3]);
+        }
+
+        function replaceThird() {
+            const third=document.createElement('div');
+            third.innerHTML='<b>세번째 교체되었음(div)</b>';
+            third.classList.add('new');
+            $container.replaceChild(third,$container.lastElementChild);
+        }
+    </script>
+</body>
+
+</html>
