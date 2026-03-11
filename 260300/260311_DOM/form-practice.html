@@ -1,38 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .focused {
+            background-color: aqua;
+        }
+        .checked{background-color: red;
+        width: 400px;}
+    </style>
 </head>
+
 <body>
     <h1>폼 양식 작성</h1>
     <fieldset>
-    <form action="">
-        <label for="name">이름</label><br>
-        <input type="text" name="name" placeholder="이름을 입력하세요."><br>
-        <label for="email">이메일</label><br>
-        <input type="email" name="email" placeholder="example@google.com"><br>
-        <label for="gender">성별</label><br>
-        <input type="radio" name="gender" value="m" checked>남성
-        <input type="radio" name="gender" value="f">여성<br>
-        <label for="date">날짜 선택</label><br>
-        <select name="select" id="date">
-            <option value="default" disabled selected>날짜 선택</style></option>
-            <option value="20260316">2026-03-16</option>
-            <option value="20260317">2026-03-17</option>
-            <option value="20260318">2026-03-18</option>
-            <option value="20260319">2026-03-19</option>
-            <option value="20260320">2026-03-20</option>
-        </select><br>
-        <label for="more">요청사항</label><br>
-        <textarea name="more" cols="50" rows="8"></textarea>
-    </form>
+        <form action="#" name="reserve" method="get">
+            <label for="name">이름</label><br>
+            <input type="text" name="name" placeholder="이름을 입력하세요."><br>
+            <label for="email">이메일</label><br>
+            <input type="email" name="email" placeholder="example@google.com"><br>
+            <label for="gender">성별</label><br>
+            <input type="radio" name="gender" value="m" checked>남성
+            <input type="radio" name="gender" value="f">여성<br>
+            <label for="date">날짜 선택</label><br>
+            <select name="select" id="date">
+                <option value="default" disabled selected>날짜 선택</style>
+                </option>
+                <option value="20260316">2026-03-16</option>
+                <option value="20260317">2026-03-17</option>
+                <option value="20260318">2026-03-18</option>
+                <option value="20260319">2026-03-19</option>
+                <option value="20260320">2026-03-20</option>
+            </select><br>
+            <label for="more">요청사항</label><br>
+            <textarea name="more" cols="50" rows="8" style="resize:none" placeholder="요청 사항을 입력하세요"></textarea><br>
+            <span>0</span>/500자 <br><br>
+            <div id="check"><input type="checkbox" name="checkbox">
+            <label for="checkbox">개인정보 수집에 동의합니다.</label></div><br><br>
+            
+            <button type="submit">신청하기</button>
+        </form>
     </fieldset>
 
     <script>
-        const $name=document.forms.value;
-        console.log($name);
+        const $form = document.forms.reserve;
+        console.log($form);
+        $form.addEventListener('focusin', (e) => e.target.classList.add('focused'));
+        $form.addEventListener('focusout', (e) => e.target.classList.remove('focused'));
+        $form.checkbox.addEventListener('change',()=>document.getElementById('check').classList.toggle('checked'))
+        // console.log($form[5].value);
+
+        $form.onsubmit = function (e) {
+            event.preventDefault();
+            let val = {
+                name: $form[0].value,
+                email: $form[1].value,
+                genderm: $form[2].value,
+                genderf: $form[3].value,
+                date: $form[4].value,
+                more: $form[5].value,
+                checkbox: $form[6].checked
+            };
+            if (val.date === 'default') {
+                alert('날짜를 선택하세요');
+                return false;
+            };
+            if(!val.name){
+                alert('이름을 입력하세요');
+                return false;
+            }
+            if (!val.checkbox) {
+                alert('개인정보 수집에 동의해주세요.');
+                return false;
+            }};
+            $form.more.addEventListener('input', (e) => {
+                len = e.target.value.trim().length;
+                document.querySelector('span').innerText = len;
+                if (len > 500) alert('글자수 초과!');
+            });
+
     </script>
 </body>
+
 </html>
