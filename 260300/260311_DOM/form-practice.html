@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>폼 양식 작성</h1>
+    <fieldset>
+    <form action="">
+        <label for="name">이름</label><br>
+        <input type="text" name="name" placeholder="이름을 입력하세요."><br>
+        <label for="email">이메일</label><br>
+        <input type="email" name="email" placeholder="example@google.com"><br>
+        <label for="gender">성별</label><br>
+        <input type="radio" name="gender" value="m" checked>남성
+        <input type="radio" name="gender" value="f">여성<br>
+        <label for="date">날짜 선택</label><br>
+        <select name="select" id="date">
+            <option value="default" disabled selected>날짜 선택</style></option>
+            <option value="20260316">2026-03-16</option>
+            <option value="20260317">2026-03-17</option>
+            <option value="20260318">2026-03-18</option>
+            <option value="20260319">2026-03-19</option>
+            <option value="20260320">2026-03-20</option>
+        </select><br>
+        <label for="more">요청사항</label><br>
+        <textarea name="more" cols="50" rows="8"></textarea>
+    </form>
+    </fieldset>
+
+    <script>
+        const $name=document.forms.value;
+        console.log($name);
+    </script>
+</body>
+</html>
